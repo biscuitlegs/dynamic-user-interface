@@ -1,0 +1,93 @@
+.slider-container {
+  --black: #000000;
+  --white: #ffffff;
+  --grey: #535353;
+  --dark-grey: #333333;
+  width: 500px;
+  height: 300px;
+  border: 2px solid var(--dark-grey);
+  position: absolute;
+  top: 10px;
+  left: 300px;
+  background-color: var(--white);
+}
+
+.slider-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: opacity linear 500ms;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.slider-arrow-buttons .left,
+.slider-arrow-buttons .right {
+  z-index: 3;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--black);
+  opacity: 0.8;
+  border: none;
+  color: var(--white);
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.slider-arrow-buttons .left:hover,
+.slider-arrow-buttons .right:hover {
+  background-color: var(--dark-grey);
+}
+
+.slider-arrow-buttons .left:active,
+.slider-arrow-buttons .right:active {
+  background-color: var(--grey);
+}
+
+.slider-arrow-buttons .left {
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+}
+
+.slider-arrow-buttons .right {
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.slider-dot-buttons {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-evenly;
+  width: 100px;
+}
+
+.slider-dot-buttons > * {
+  background-color: var(--black);
+  opacity: 0.8;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+}
+
+.slider-dot-buttons > *:hover {
+  background-color: var(--grey);
+  cursor: pointer;
+}
+
+.slider-dot-buttons > *:active {
+  background-color: var(--dark-grey);
+}
+
+.slider-dot-buttons > .active {
+  background-color: var(--white);
+}
