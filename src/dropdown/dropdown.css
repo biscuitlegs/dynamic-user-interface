@@ -1,0 +1,117 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --grey: #a5a5a5;
+  --dark-grey: #3b3b3b;
+  --purple: #3f37c9;
+  --dark-purple: #342eac;
+  --font-size: 16px;
+}
+
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.dropdown-button {
+  height: 30px;
+  border-radius: 0;
+  background-color: var(--white);
+  border: 1px solid var(--grey);
+  border-left: 0.5em solid var(--purple);
+  transition: background-color 0.2s linear;
+  padding: 0.8em;
+  flex: 1;
+  font-size: var(--font-size);
+  font-family: sans-serif;
+  color: var(--dark-grey);
+  text-align: left;
+}
+
+.dropdown-button:hover {
+  background-color: var(--purple);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.dropdown-button:active {
+  background-color: var(--dark-purple);
+}
+
+.dropdown-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dropdown-button:hover .dropdown-icon {
+  color: var(--white);
+}
+
+.dropdown-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid var(--grey);
+  border-top: none;
+  position: absolute;
+  width: 95%;
+  right: 0%;
+  top: 29px;
+  z-index: -1;
+  visibility: hidden;
+}
+
+.dropdown-list > * {
+  font-size: var(--font-size);
+  position: relative;
+}
+
+.dropdown-list > * > a {
+  display: block;
+  padding: 0.5em 0;
+  padding-left: 1em;
+  text-decoration: none;
+  color: var(--dark-grey);
+  font-family: sans-serif;
+}
+
+.dropdown-list > * a:visited {
+  color: var(--dark-grey);
+}
+
+.dropdown-list > * > a:hover {
+  background-color: var(--purple);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.dropdown-list > * > a:active {
+  background-color: var(--dark-purple);
+}
+
+.dropdown-list > *:hover a:visited {
+  color: var(--white);
+}
+
+.visible {
+  visibility: visible;
+}
+
+@keyframes slide-down {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.extended {
+  animation: slide-down 300ms ease-in-out forwards;
+  transform-origin: top center;
+}
