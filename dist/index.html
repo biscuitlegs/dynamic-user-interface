@@ -11,22 +11,42 @@
     <title>Dynamic User Interface</title>
   </head>
   <body>
-    <main>
-      <div class="dropdown-container">
-        <button class="dropdown-button">
-          Dropdown
-          <i class="bi bi-chevron-down dropdown-icon"></i>
-        </button>
-        <ul class="dropdown-list">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Solutions</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">FAQ</a></li>
-        </ul>
-      </div>
-    </main>
+    <div class="dropdown-container">
+      <button class="dropdown-button">
+        Dropdown
+        <i class="bi bi-chevron-down dropdown-icon"></i>
+      </button>
+      <ul class="dropdown-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Solutions</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="material-container">
+      <ul class="material-list collapsed">
+        <li>
+          <a href="#">
+            <i class="bi bi-bell material-link-icon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bi bi-bookmark material-link-icon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bi bi-box-arrow-in-up material-link-icon"></i>
+          </a>
+        </li>
+      </ul>
+      <button class="material-expand">
+        <i class="bi bi-plus material-expand-icon"></i>
+      </button>
+    </div>
   </body>
   <script src="./main.js"></script>
 </html>

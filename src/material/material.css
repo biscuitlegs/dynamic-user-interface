@@ -1,0 +1,105 @@
+.material-container {
+  --green: #2a9d8f;
+  --dark-green: #1f776d;
+  --darker-green: #16574f;
+  --white: #ffffff;
+  --grey: #eeeeee;
+  --dark-grey: #bdbaba;
+  --darker-grey: #888585;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.material-expand {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--green);
+  border: none;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.material-expand:hover {
+  background-color: var(--dark-green);
+  cursor: pointer;
+}
+
+.material-expand:active {
+  background-color: var(--darker-green);
+}
+
+.material-expand-icon {
+  font-size: 35px;
+  color: var(--white);
+}
+
+.material-list {
+  padding: 0;
+}
+
+.material-list > * {
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+.material-list a {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--grey);
+  border-radius: 50%;
+  padding: 0.2em;
+}
+
+.material-list a:hover {
+  background-color: var(--dark-grey);
+}
+
+.material-list a:active {
+  background-color: var(--darker-grey);
+}
+
+.material-link-icon {
+  font-size: 25px;
+  color: black;
+}
+
+@keyframes expand {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes collapse {
+  from {
+    transform: scaleY(1);
+  }
+
+  to {
+    transform: scaleY(0);
+  }
+}
+
+.expanded {
+  animation: expand 150ms linear forwards;
+  transform-origin: bottom center;
+}
+
+.collapsed {
+  animation: collapse 150ms linear forwards;
+  transform-origin: bottom center;
+}
